@@ -12,8 +12,12 @@ const apiStatusConstants = {
 
 const ProfileDetails = props => {
   const renderProfile = () => {
-    const {profileDetails} = props
-    const {name, profileImageUrl, shortBio} = profileDetails
+    const profileDetails = {
+      name: 'Bhargavi B', // Hardcoded name
+      profileImageUrl: 'url-to-image', // Replace with actual image URL
+      shortBio: 'Full-Stack Developer || Computer Science Student' // Hardcoded bio
+    }
+    const { name, profileImageUrl, shortBio } = profileDetails
 
     return (
       <div className="profile-details-container">
@@ -25,7 +29,7 @@ const ProfileDetails = props => {
   }
 
   const renderProfileFailure = () => {
-    const {getProfileDetails} = props
+    const { getProfileDetails } = props
     return (
       <div className="profile-failure-container">
         <button
@@ -45,7 +49,7 @@ const ProfileDetails = props => {
     </div>
   )
 
-  const {profileApiStatus} = props
+  const { profileApiStatus } = props
 
   switch (profileApiStatus) {
     case apiStatusConstants.inProgress:

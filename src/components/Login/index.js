@@ -6,8 +6,8 @@ import './index.css'
 
 class Login extends Component {
   state = {
-    username: '',
-    password: '',
+    username: 'Bhargavi',
+    password: 'bhargavi@2024',
     errorMsg: '',
     showErrorMsg: false,
   }
@@ -26,8 +26,8 @@ class Login extends Component {
     event.preventDefault()
     let {username, password} = this.state
 
-    if (username.toLowerCase().trim(' ') === 'saireddy') username = 'rahul'
-    if (password === 'saireddy@2024') password = 'rahul@2021'
+    if (username.toLowerCase().trim(' ') === 'bhargavi') username = 'rahul'
+    if (password === 'bhargavi@2024') password = 'rahul@2021'
 
     const userDetails = {username, password}
     const LoginApiUrl = 'https://apis.ccbp.in/login'
